@@ -2,6 +2,14 @@
 
 Utilizar el comando "dos2unix *" para que se pueda ejecutar en linux de manera apropiada y no de fallo
 
+Compilar flex
+
+flex --header-file="lex.yy.h" lex.l
+
+Añadimos las cabeceras de las funciones y de la struct a lex.yy.h
+
+Compilamos con make----->Listos para ejecutar ./compilador <archivo>
+
 Comando time ./compilador para medir el tiempo de ejecución
 
 Comando valgrind ./compilador para comprobar que libera toda la memoria
@@ -84,9 +92,5 @@ FICHERO CON EL SISTEMA DE ENTRADA
 
 Desde aquí se accede al fichero concurrentSum.go para analizarlo como un flujo de caracteres. El sistema de entrada ha de devolver el siguiente carácter del código fuente cada vez que es invocado, y ha de permitir devolver caracteres al flujo de entrada si es necesario. Podemos, por tanto, considerar para ello el diseño de dos funciones.
 
-Compilar flex
-flex --header-file="lex.yy.h" lex.l
-Añadimos las cabeceras de las funciones y de la struct a lex.yy.h
-Compilamos con make----->Listos para ejecutar ./compilador <archivo>
 Documentación Go:
 https://go.dev/ref/spec#Keywords
