@@ -90,5 +90,3 @@ Añadimos las cabeceras de las funciones y de la struct a lex.yy.h
 Compilamos con make----->Listos para ejecutar ./compilador <archivo>
 Documentación Go:
 https://go.dev/ref/spec#Keywords
-# Analizador-Lexico-Go-Con-Flex
-# Analizador-Lexico-Go-Con-Flex
