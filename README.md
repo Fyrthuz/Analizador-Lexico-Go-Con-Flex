@@ -1,6 +1,7 @@
 # Analizador-Lexico-Go
+Instrucciones ejecucion
 
-Utilizar el comando "dos2unix *" para que se pueda ejecutar en linux de manera apropiada y no de fallo
+Utilizar el comando "dos2unix *" para que se pueda ejecutar en sistemas Linux de manera apropiada y no de ningún tipo de fallo (aunque no debería darlo de todos modos solo por si acaso ya que desarrollé el código en Windows)
 
 Compilar flex
 
@@ -8,21 +9,30 @@ flex --header-file="lex.yy.h" lex.l
 
 Añadimos las cabeceras de las funciones y de la struct a lex.yy.h
 
-Compilamos con make----->Listos para ejecutar ./compilador <archivo>
+[AUNQUE CON ESTA VERSION SEGUN COMO ESTA PUEDES OMITIR ESTE PASO, ES POR SI QUERÉIS COMPILAR POR VUESTRA CUENTA]
 
-Comando time ./compilador para medir el tiempo de ejecución
+Comando para producir el ejecutable ----> make
 
-Comando valgrind ./compilador para comprobar que libera toda la memoria
+Nombre del ejecutable -----> compilador
+
+Documento con el output(esta no se produce durante la ejecución del código la subo como documento anexo) -----> salida.txt
+
+Comando time(para medir el tiempo de ejecucion) ----> ./compilador <archivo> para medir el tiempo de ejecución
+
+Comando valgrind(para controlar que se libera toda la memoria) ----> ./compilador <archivo> para comprobar que libera toda la memoria
+
+Comando para ejecutarlo normal --.-> ./compilador <archivo>
+Especificaciones tecnicas
+
+Tabla de Simbolos: Arbol binario de búsqueda
+
+Sistema de entrada: Doble búffer con centinela
+
 
 GUION PRACTICA
 Práctica 1
 
 Construir un analizador léxico que devuelva los componentes léxicos que aparecen en el programa concurrentSum.go, codificado en el lenguaje Go.
-
-
-Tabla de Simbolos: Arbol binario de búsqueda
-
-Sistema de entrada: Doble búffer con centinela
 
 Orientación
 
@@ -91,6 +101,7 @@ Fundamentalmente ha de contener dos funciones imprescindibles: 1) una función d
 FICHERO CON EL SISTEMA DE ENTRADA
 
 Desde aquí se accede al fichero concurrentSum.go para analizarlo como un flujo de caracteres. El sistema de entrada ha de devolver el siguiente carácter del código fuente cada vez que es invocado, y ha de permitir devolver caracteres al flujo de entrada si es necesario. Podemos, por tanto, considerar para ello el diseño de dos funciones.
+
 
 Documentación Go:
 https://go.dev/ref/spec#Keywords

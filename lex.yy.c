@@ -1068,12 +1068,12 @@ YY_RULE_SETUP
 case 14:
 YY_RULE_SETUP
 #line 125 "lex.l"
-{return(AUTO_SUMA);}
+{return(AUTOSUMA);}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
 #line 126 "lex.l"
-{return(AUTO_RESTA);}
+{return(AUTORESTA);}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP

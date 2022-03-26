@@ -1,22 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "lex.yy.h"
 #include "analizadorsintactico.h"
 #include "tablasimbolos.h"
-//ALT+SHIFT+T
+#include "gestionerrores.h"
+#include "lex.yy.h"
 
 int main(int argc,char **argv){
-    if(argc<2){
-      printf("No introdujo el fichero a analizar\n");
-      exit(0);
+    //Pasamos como parametros el nombre del fichero, de otro modo ocurre un error
+    if(argc!=2){
+      errorParametros();
     }
+    //Abrimos el fichero en el lex.yy.
     abrirfichero(argv[1]);
+    //Inicializamos la tabla de simbolos
     inicializarTabla();
+    //Empezamos a analizar el codigo
     analizar_codigo();
-
-    eliminarTabla();
+    //Cerramos y liberamos los recursos utilizados por flex
     cerrar();
+
+    //Liberamos la tabla de símbolos y liberamos el sistema de sistema de entrada
+    //liberando también los recursos utilizados
+    eliminarTabla();
     return 0;
 
 }

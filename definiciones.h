@@ -34,8 +34,8 @@
 #define OPERADOR_FLECHA 335//<-
 #define INICIO_COMENTARIO 336// /*
 #define FIN_COMENTARIO 337// */
-#define AUTO_SUMA 338//++
-#define AUTO_RESTA 339//--
+#define AUTOSUMA 338//++
+#define AUTORESTA 339//--
 #define RESTA_Y_ASIGNACION 340//+=
 #define MULT_Y_ASIGNACION 341//*=
 #define DIV_Y_ASIGNACION 342///=
