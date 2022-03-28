@@ -14,7 +14,7 @@ Añadimos las cabeceras de las funciones y de la struct a lex.yy.h
 Comando para producir el ejecutable ----> make
 
 Nombre del ejecutable -----> compilador
-
+x
 Documento con el output(esta no se produce durante la ejecución del código la subo como documento anexo) -----> salida.txt
 
 Comando time(para medir el tiempo de ejecucion) ----> ./compilador <archivo> para medir el tiempo de ejecución
