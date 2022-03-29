@@ -158,7 +158,9 @@ short siguiente_comp_lexico(comp_lexico *lex){
   free(lex->lexema);
   lex->lexema = NULL;
  }
- lex->lexema = strdup(yytext);
+ lex->lexema = (char*)malloc((strlen(yytext)+1)*sizeof(char));
+ lex->lexema[strlen(yytext)]='\0';
+ strncpy(lex->lexema,yytext,strlen(yytext));
  if(lex->tipo==-3){
   errorLexico(yylineno);
  }else if(lex->tipo==ID){
