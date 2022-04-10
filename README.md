@@ -9,7 +9,7 @@ flex --header-file="lex.yy.h" lex.l
 
 Añadimos las cabeceras de las funciones y de la struct a lex.yy.h
 
-[AUNQUE CON ESTA VERSION SEGUN COMO ESTA PUEDES OMITIR ESTE PASO, ES POR SI QUERÉIS COMPILAR POR VUESTRA CUENTA]
+[AUNQUE CON ESTA VERSION SEGUN COMO ESTA PUEDES OMITIR ESTE PASO, ES POR SI QUERÉIS COMPILAR POR VUESTRA CUENTA, SI LO HACEIS TENEIS QUE METER LAS FUNCIONES DECLARADAS EN EL .l EN EL .h generado]
 
 Comando para producir el ejecutable ----> make
 
